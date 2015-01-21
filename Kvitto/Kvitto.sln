@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.22310.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kvitto", "Kvitto\Kvitto.csproj", "{E6253E5B-1012-4633-9B7F-8BEBBE37EE1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kvitto.Tests", "Kvitto.Tests\Kvitto.Tests.csproj", "{887A4186-2BF4-40CA-BAFA-F52838F94682}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E6253E5B-1012-4633-9B7F-8BEBBE37EE1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6253E5B-1012-4633-9B7F-8BEBBE37EE1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6253E5B-1012-4633-9B7F-8BEBBE37EE1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6253E5B-1012-4633-9B7F-8BEBBE37EE1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{887A4186-2BF4-40CA-BAFA-F52838F94682}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{887A4186-2BF4-40CA-BAFA-F52838F94682}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{887A4186-2BF4-40CA-BAFA-F52838F94682}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{887A4186-2BF4-40CA-BAFA-F52838F94682}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
