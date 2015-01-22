@@ -16,7 +16,7 @@ namespace Kvitto.Model
             set {
                 if(value <= 0)
                 {
-                    throw new ArgumentOutOfRangeException("Double must be greater than 0");
+                    throw new ArgumentOutOfRangeException("Receipt::Subtotal - Double must be greater than 0");
                 }
                 _subtotal = value;
             }
@@ -31,29 +31,46 @@ namespace Kvitto.Model
             Calculate(Subtotal);
         }
 
+        /// <summary>
+        /// Calulates and sets properties from subtotal
+        /// </summary>
+        /// <param name="subtotal">Subtotal for purchase</param>
         private void Calculate(double subtotal) {
+            Rate = GetRate(subtotal);
+            Discount = subtotal * Rate;
+            Total = Subtotal - Discount;
+        }
+
+        /// <summary>
+        /// Calculates rate, returns unformatted double
+        /// </summary>
+        /// <param name="subtotal">Subtotal for purchase</param>
+        /// <returns></returns>
+        private double GetRate(double subtotal) {
+            double rate;
+
             if (subtotal >= 0 && subtotal < 500)
             {
-                Rate = 0;
+                rate = 0;
             }
             else if (subtotal >= 500 && subtotal < 1000)
             {
-                Rate = 0.05;
+                rate = 0.05;
             }
             else if (subtotal >= 1000 && subtotal < 5000)
             {
-                Rate = 0.10;
+                rate = 0.10;
             }
             else if (subtotal >= 5000)
             {
-                Rate = 0.15;
+                rate = 0.15;
             }
-            else {
-                throw new Exception("Kunde inte bestämma en rabattsats");
+            else
+            {
+                throw new Exception("Receipt::GetRate - Unknwon error occurred");
             }
 
-            Discount = subtotal * Rate;
-            Total = Subtotal - Discount;
+            return rate;
         }
 
     }

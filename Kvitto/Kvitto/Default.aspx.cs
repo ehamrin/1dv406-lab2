@@ -14,11 +14,15 @@ namespace Kvitto
         {
         }
 
+        /// <summary>
+        /// Create receipt and display formatted in page
+        /// </summary>
         protected void Submit_Click(object sender, EventArgs e)
         {
             Receipt.Visible = true;
 
             Receipt receipt = new Receipt(double.Parse(SumInput.Text));
+
             SubTotal.Text = String.Format("{0:c}", receipt.Subtotal);
             Rate.Text = String.Format("{0:p0}", receipt.Rate);
             Discount.Text = String.Format("{0:c}", receipt.Discount);
